@@ -1,0 +1,881 @@
+
+@font-face {
+  font-family: 'Source Han Serif';
+  src: url('font/SourceHanSerifTC-Medium.otf') format('opentype');
+}
+
+/* body {
+  font-family: 'Source Han Serif', sans-serif;
+}*/
+
+/* 其他元素的字體設定 
+h1, h2, h3, p {
+  font-family: 'Source Han Serif', sans-serif;
+} */
+
+@media (max-width:991px) {
+  .display-in-desktop {
+    display: none;
+  }
+}
+
+@media (min-width:991px) {
+  .display-in-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav a.nav-link {
+    font-size: 10px; /* 較小的字体大小 */
+  }
+}
+
+.custom-margin1 {
+  margin-top: 2rem; /* 設置你需要的上邊距大小 */
+  margin-bottom: 6rem; /* 設置你需要的下邊距大小 */
+}
+
+.custom-margin2 {
+  margin-top: 6rem; /* 設置你需要的上邊距大小 */
+}
+
+.custom-margin3 {
+  margin-right: 3rem; /* 設置你需要的右邊距大小 */
+}
+
+.custom-margin4 {
+  margin-left: 2rem; /* 設置你需要的右邊距大小 */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding-top: 106px;
+  /* 固定Navbar的高度 + 視頻區塊的高度 */
+}
+
+/* 自訂的CSS，使Navbar永遠置頂 */
+body {
+  padding-top: 56px;
+  /* 固定Navbar的高度 */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Source Han Serif', sans-serif;
+}
+
+.navbar-nav a.nav-link {
+  font-size: 20px; /* 你想要的字体大小 */
+}
+
+.navbar-nav a.nav-link:not(.active) {
+  display: none;
+}
+
+#progress-bar {
+  height: 4px;
+  background-color: rgba(121,54,150);
+  /* 进度条颜色，可以根据需要修改 */
+  position: fixed;
+  top: 61px;
+  /* Navbar的高度 */
+  left: 0;
+  width: 0;
+  transition: width 0.3s;
+  /* 添加过渡效果 */
+  z-index: 1000; /* 設定較大的 z-index 值，確保進度條在最上層 */
+}
+
+
+#section1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/pre0111.png");
+  min-height: 2400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  z-index: 500;
+}
+
+#section1 h1 {
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 55px; /* 距離頂部的位置 */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 50px;
+  font-family: 'Source Han Serif', sans-serif;
+}
+
+#section2-1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/pre-02-1.png");
+  min-height: 2400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+#section2 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/pre-o2-2.png");
+  min-height: 2400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+#section2 p {
+  background-color: rgb(255, 255, 255);
+  min-height: 20vh;
+  max-width: 800px;
+  margin: 30px auto; /* 設定上下邊界距離為20像素，水平置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 30px;
+}
+
+#blackScreen {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  opacity: 1; /* 初始透明度為1，即完全黑色 */
+  transition: opacity 0.5s ease; /* 設定變化動畫 */
+  z-index: 1;
+}
+
+#story-1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/story_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  max-width: 100%;
+  z-index: 4;
+}
+
+#story-2 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/story_2_new.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  max-width: 100%;
+  z-index: 2;
+}
+
+#story-3 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/story_3_new.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  max-width: 100%;
+  z-index: 2;
+}
+
+#story-4 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/story_4_new.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+#story-5 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/story_5_new.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+#conclusion-1 p {
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 10px; /* 設置內邊距，使文字不貼著外框 */
+  text-align: center;
+}
+
+#conclusion-5 p {
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 100px; /* 設置內邊距，使文字不貼著外框 */
+  text-align: center;
+}
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-intro h {
+    margin: 30px 0 0; /* 添加顶部边距 */
+    font-size: 34px;
+    font-family: 'Source Han Serif', sans-serif;
+}
+
+#title-intro p {
+  margin: 30px 0 0; /* 添加顶部边距 */
+  font-size: 18px;
+}
+
+#function1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/function.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  max-width: 100%;
+  z-index: 2;
+}
+
+
+#bridge1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/3-4-2.png");
+  min-height: 2400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  z-index: 500;
+}
+
+#bridge1 p {
+  background-color: rgb(255, 255, 255);
+  min-height: 40vh;
+  max-width: 800px;
+  margin: 30px auto; /* 設定上下邊界距離為20像素，水平置中 */
+  font-size:18px;
+  padding: 40px;
+  /* display: flex; 
+  justify-content: center; 
+  align-items: center; */
+  text-align: left;
+}
+
+#bridge2 h {
+  font-size: 34px;
+  font-family: 'Source Han Serif';
+}
+
+#bridge2 p {
+  font-size: 18px;
+}
+
+#collection {
+  background-color: rgb(199, 189, 221);
+  padding: 20px; /* 添加內邊距，以避免卡片超出 */
+}
+
+.parent-container {
+  width: 100vw;
+  position: relative;
+  height: auto; /* 設定足夠高度 */
+}
+
+/* card1 */
+@media (max-width: 768px) {
+  .card-container#card1 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card1 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back1 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover1 {
+  transform: rotatey(180deg);
+}
+
+#cover1 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle1_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back1 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_1_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card2 */
+
+@media (max-width: 768px) {
+  .card-container#card2 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card2 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back2 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover2 {
+  transform: rotatey(180deg);
+}
+
+#cover2 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle2_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back2 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_2_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card3 */
+@media (max-width: 768px) {
+  .card-container#card3 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card3 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back3 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover3 {
+  transform: rotatey(180deg);
+}
+
+#cover3 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle3_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back3 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_3_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+
+/* card4 */
+@media (max-width: 768px) {
+  .card-container#card4 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card4 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-container:hover #back4 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover4 {
+  transform: rotatey(180deg);
+}
+
+#cover4 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle4_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back4 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_4_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card5 */
+@media (max-width: 768px) {
+  .card-container#card5 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card5 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+  
+}
+
+.card-container:hover #back5 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover5 {
+  transform: rotatey(180deg);
+}
+
+#cover5 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle5_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back5 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_5_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card6 */
+
+@media (max-width: 768px) {
+  .card-container#card6 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card6 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back6 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover6 {
+  transform: rotatey(180deg);
+}
+
+#cover6 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle6_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back6 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_6_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card7 */
+
+@media (max-width: 768px) {
+  .card-container#card7 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card7 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back7 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover7 {
+  transform: rotatey(180deg);
+}
+
+#cover7 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle7_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back7 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_7_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card8 */
+
+@media (max-width: 768px) {
+  .card-container#card8 {
+    width: 100%; /* 使用百分比使其佔滿整個父容器 */
+    height: auto; /* 自動調整高度，以保持原始寬高比例 */
+    margin-bottom: 10px; /* 增加間距，使卡片之間有空隙 */
+  }
+}
+
+.card-container#card8 {
+  width: 487px;
+  height: 300px;
+  position: relative;
+}
+
+.card-container:hover #back8 {
+  transform: rotatey(0deg) ; 
+}
+
+.card-container:hover #cover8 {
+  transform: rotatey(180deg);
+}
+
+#cover8 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/principle8_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(0deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+#back8 {
+  content: url('https://hsiaofu.github.io/project_photos_videos/prin_8_new.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotatey(-180deg);
+  object-fit: cover; /* 保持原始比例填充容器 */
+}
+
+/* card-end */
+
+#section7 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/ending-1.png");
+  min-height: 1200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  padding: 20px;
+  position: relative;
+}
+
+#section7-1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/ending-1.png");
+  min-height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  padding: 20px;
+  position: relative;
+}
+
+#section8 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/ending_b_w.png");
+  min-height: 1200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+#section8-1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/ending_b_w.png");
+  min-height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+#section9 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/Sketches.png");
+  min-height: 1600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+#section9-1 {
+  background-image: url("https://hsiaofu.github.io/project_photos_videos/Sketches.png");
+  min-height: 1400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* 根据需要更改背景颜色 */
+}
+
+#section-bottom {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #section-bottom span {
+    font-size: 18px; /* 在小螢幕上進一步縮小字體大小 */
+  }
+
+  #section-bottom br {
+    display: block; /* 重新顯示 <br> 元素 */
+    margin-bottom: 10px; /* 增加垂直間距 */
+  }
+}
+
+.bordered-title {
+  background-color: #aaaaaae8; /* 灰色底色 */
+  padding: 10px;
+  display: inline-block;
+}
+
+.caption {
+  font-size: 18px; /* 設置字體大小，您可以根據需要進行調整 */
+}
+
+#conclusion-1, #conclusion-2, #conclusion-3, #conclusion-4, #conclusion-5 {
+  font-size: 18px; /* 設置字體大小，您可以根據需要進行調整 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ending-1, #ending-1-2, #ending-2, #ending-2-2, #ending-3, #ending-3-2 {
+  font-size: 18px;
+  background-color: rgba(255, 255, 255);
+  min-height: 20vh;
+  max-width: 800px;
+  margin: 30px auto; /* 設定上下邊界距離為20像素，水平置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+
+/*#img-1 
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://hsiaofu.github.io/project_photos_videos/1.png');
+  background-size: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  z-index: 3;
+}
+
+#img-2 {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://hsiaofu.github.io/project_photos_videos/2.png');
+  background-size: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  z-index: 3;
+}
+
+#img-3 {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://hsiaofu.github.io/project_photos_videos/3.png');
+  background-size: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  z-index: 3;
+}
+
+#img-4 {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://hsiaofu.github.io/project_photos_videos/4.png');
+  background-size: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  z-index: 3;
+}*/
+
